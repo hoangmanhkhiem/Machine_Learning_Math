@@ -1,6 +1,7 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
   
+#Tim trong so
 def estimate_coef(x, y): 
     n = np.size(x) 
     m_x, m_y = np.mean(x), np.mean(y) 
@@ -9,7 +10,8 @@ def estimate_coef(x, y):
     b = SS_xy / SS_xx 
     a = m_y - b*m_x 
     return(a, b) 
-   
+
+#Do thi hoi quy tuyen tinh
 def plot_regression_line(x, y, b): 
     plt.scatter(x, y, color = "m", 
                marker = "o", s = 30) 
@@ -19,9 +21,11 @@ def plot_regression_line(x, y, b):
     plt.ylabel('y')
     plt.show() 
 
+#Du bao cho X
 def forecast(x,a,b):
     return print("Du doan gia tri Y khi X = ",x," la ",a*x+b)
- 
+
+#Ham chinh
 def main(): 
     x = np.array([1, 2, 4, 6, 8]) 
     y = np.array([5, 7, 11, 15, 19])
