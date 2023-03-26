@@ -10,9 +10,9 @@ def estimate_coef(x, y):
     m_x, m_y = np.mean(x), np.mean(y) 
     SS_xy = np.sum(y*x) - n*m_y*m_x 
     SS_xx = np.sum(x*x) - n*m_x*m_x 
-    b = SS_xy / SS_xx 
     a = m_y - b*m_x 
-    return(a, b) 
+    b = SS_xy / SS_xx 
+    return(a, b)
 
 #Du bao cho X
 def forecast(x,a,b):
