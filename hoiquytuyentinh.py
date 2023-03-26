@@ -10,13 +10,13 @@ def estimate_coef(x, y):
     m_x, m_y = np.mean(x), np.mean(y) 
     SS_xy = np.sum(y*x) - n*m_y*m_x 
     SS_xx = np.sum(x*x) - n*m_x*m_x 
-    a = m_y - b*m_x 
     b = SS_xy / SS_xx 
-    return(a, b)
+    a = m_y - b*m_x
+    return(b, a)
 
 #Du bao cho X
 def forecast(x,a,b):
-    return print("Du doan gia tri Y khi X = ",x," la ",a*x+b)
+    return print("Du doan gia tri Y khi X = ",x," la ",a+b*x)
 
 #Ham chinh
 def main(): 
@@ -26,7 +26,7 @@ def main():
     b = estimate_coef(x, y) 
     print("Gia tri cua a = {}  \nGia tri cua b = {}".format(b[0], b[1]))
     for i in X:
-        forecast(i,b[0],b[1])
+        forecast(i,b[1],b[0])
  
 if __name__ == "__main__": 
     main() 
