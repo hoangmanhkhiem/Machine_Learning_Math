@@ -1,4 +1,4 @@
-#Author : Tống Diệu Hương
+#Author : Hoàng Mạnh Khiêm
 #Program : Hoi quy tuyen tinh
 
 import numpy as np 
