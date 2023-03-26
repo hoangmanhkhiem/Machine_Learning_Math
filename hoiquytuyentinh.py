@@ -3,7 +3,7 @@
 
 import numpy as np 
 import matplotlib.pyplot as plt 
-  
+ 
 #Tim trong so
 def estimate_coef(x, y): 
     n = np.size(x) 
@@ -13,11 +13,11 @@ def estimate_coef(x, y):
     a = SS_xy / SS_xx 
     b = m_y - a*m_x
     return(a, b)
-
+ 
 #Du bao cho X
 def forecast(x,a,b):
-    return print("Du doan gia tri Y khi X = ",x," la ",a+b*x)
-
+    return print("Du doan gia tri Y khi X = ",x," la ",a*x+b)
+ 
 #Ham chinh
 def main(): 
     x = np.array([1, 2, 4, 6, 8]) 
@@ -26,7 +26,7 @@ def main():
     b = estimate_coef(x, y) 
     print("Gia tri cua a = {}  \nGia tri cua b = {}".format(b[0], b[1]))
     for i in X:
-        forecast(i,b[1],b[0])
+        forecast(i,b[0],b[1])
  
 if __name__ == "__main__": 
     main() 
