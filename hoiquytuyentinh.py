@@ -1,3 +1,6 @@
+#Author : Tống Diệu Hương
+#Program : Hoi quy tuyen tinh
+
 import numpy as np 
 import matplotlib.pyplot as plt 
   
