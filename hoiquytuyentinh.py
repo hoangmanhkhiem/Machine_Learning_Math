@@ -20,11 +20,11 @@ def forecast(x,a,b):
  
 #Ham chinh
 def main(): 
-    x = np.array([1, 2, 4, 6, 8]) 
+    x = np.array([1, 2, 4, 6, 8])
     y = np.array([5, 7, 11, 15, 19])
     X = np.array([7, 11])
-    b = estimate_coef(x, y) 
-    print("Gia tri cua a = {}  \nGia tri cua b = {}".format(b[0], b[1]))
+    b = estimate_coef(x, y)
+    print(f"Gia tri cua a = {b[0]}  \nGia tri cua b = {b[1]}")
     for i in X:
         forecast(i,b[0],b[1])
  
